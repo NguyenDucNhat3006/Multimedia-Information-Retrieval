@@ -1,0 +1,285 @@
+{
+  "sources": [
+    {
+      "source": "E:\\mlcv1\\Datasets\\HCMAI24\\updated\\videos\\batch1",
+      "inspection": "filesystem-stat",
+      "archive_bytes": null,
+      "file_count": 363,
+      "video_file_count": 363,
+      "compressed_bytes": 66931802158,
+      "uncompressed_bytes": 66931802158,
+      "extensions": {
+        ".mp4": 363
+      },
+      "top_level_paths": {
+        "(root)": 363
+      },
+      "examples": [
+        {
+          "path": "L01_V001.mp4",
+          "bytes": 113433861,
+          "compressed_bytes": 113433861
+        },
+        {
+          "path": "L01_V002.mp4",
+          "bytes": 95357136,
+          "compressed_bytes": 95357136
+        },
+        {
+          "path": "L01_V003.mp4",
+          "bytes": 200935087,
+          "compressed_bytes": 200935087
+        },
+        {
+          "path": "L01_V004.mp4",
+          "bytes": 90388007,
+          "compressed_bytes": 90388007
+        },
+        {
+          "path": "L01_V005.mp4",
+          "bytes": 184205479,
+          "compressed_bytes": 184205479
+        },
+        {
+          "path": "L01_V006.mp4",
+          "bytes": 91768588,
+          "compressed_bytes": 91768588
+        },
+        {
+          "path": "L01_V007.mp4",
+          "bytes": 104216612,
+          "compressed_bytes": 104216612
+        },
+        {
+          "path": "L01_V008.mp4",
+          "bytes": 211363207,
+          "compressed_bytes": 211363207
+        },
+        {
+          "path": "L01_V009.mp4",
+          "bytes": 186713380,
+          "compressed_bytes": 186713380
+        },
+        {
+          "path": "L01_V010.mp4",
+          "bytes": 100961015,
+          "compressed_bytes": 100961015
+        },
+        {
+          "path": "L01_V011.mp4",
+          "bytes": 174194380,
+          "compressed_bytes": 174194380
+        },
+        {
+          "path": "L01_V012.mp4",
+          "bytes": 193270885,
+          "compressed_bytes": 193270885
+        },
+        {
+          "path": "L01_V013.mp4",
+          "bytes": 201329035,
+          "compressed_bytes": 201329035
+        },
+        {
+          "path": "L01_V014.mp4",
+          "bytes": 168591984,
+          "compressed_bytes": 168591984
+        },
+        {
+          "path": "L01_V015.mp4",
+          "bytes": 189260792,
+          "compressed_bytes": 189260792
+        }
+      ],
+      "smallest_videos": [
+        {
+          "path": "L02_V020.mp4",
+          "bytes": 84474273
+        },
+        {
+          "path": "L05_V021.mp4",
+          "bytes": 87613444
+        },
+        {
+          "path": "L11_V004.mp4",
+          "bytes": 89760389
+        },
+        {
+          "path": "L01_V004.mp4",
+          "bytes": 90388007
+        },
+        {
+          "path": "L11_V010.mp4",
+          "bytes": 90795016
+        },
+        {
+          "path": "L11_V015.mp4",
+          "bytes": 90881695
+        },
+        {
+          "path": "L07_V007.mp4",
+          "bytes": 91074248
+        },
+        {
+          "path": "L11_V022.mp4",
+          "bytes": 91343876
+        },
+        {
+          "path": "L01_V006.mp4",
+          "bytes": 91768588
+        },
+        {
+          "path": "L02_V006.mp4",
+          "bytes": 93372631
+        }
+      ],
+      "duplicate_media_names": {},
+      "unknown": [
+        "codec/fps/duration/VFR chưa decode hoặc probe",
+        "tính tương thích encoder của vector có sẵn",
+        "ground truth chưa kiểm duyệt"
+      ]
+    },
+    {
+      "source": "E:\\batch2.zip",
+      "inspection": "zip64-central-directory",
+      "archive_bytes": 49009103130,
+      "file_count": 363,
+      "video_file_count": 363,
+      "compressed_bytes": 49009010972,
+      "uncompressed_bytes": 49009010972,
+      "extensions": {
+        ".mp4": 363
+      },
+      "top_level_paths": {
+        "mlcv1": 363
+      },
+      "examples": [
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V024.mp4",
+          "bytes": 151618373,
+          "compressed_bytes": 151618373
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V045.mp4",
+          "bytes": 9476571,
+          "compressed_bytes": 9476571
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L14_V025.mp4",
+          "bytes": 140941890,
+          "compressed_bytes": 140941890
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L14_V026.mp4",
+          "bytes": 276043643,
+          "compressed_bytes": 276043643
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V007.mp4",
+          "bytes": 157737402,
+          "compressed_bytes": 157737402
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V009.mp4",
+          "bytes": 147292311,
+          "compressed_bytes": 147292311
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V006.mp4",
+          "bytes": 159736030,
+          "compressed_bytes": 159736030
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V010.mp4",
+          "bytes": 125005468,
+          "compressed_bytes": 125005468
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V011.mp4",
+          "bytes": 183047541,
+          "compressed_bytes": 183047541
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V012.mp4",
+          "bytes": 28013942,
+          "compressed_bytes": 28013942
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V014.mp4",
+          "bytes": 143377635,
+          "compressed_bytes": 143377635
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V022.mp4",
+          "bytes": 160601073,
+          "compressed_bytes": 160601073
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V003.mp4",
+          "bytes": 199974242,
+          "compressed_bytes": 199974242
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L13_V028.mp4",
+          "bytes": 142565801,
+          "compressed_bytes": 142565801
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L22_V012.mp4",
+          "bytes": 130263202,
+          "compressed_bytes": 130263202
+        }
+      ],
+      "smallest_videos": [
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V045.mp4",
+          "bytes": 9476571
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V040.mp4",
+          "bytes": 10064022
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V044.mp4",
+          "bytes": 10295258
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V041.mp4",
+          "bytes": 10338376
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V017.mp4",
+          "bytes": 27225656
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L24_V012.mp4",
+          "bytes": 28013942
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L23_V001.mp4",
+          "bytes": 49985544
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L23_V017.mp4",
+          "bytes": 51168735
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L23_V003.mp4",
+          "bytes": 51737319
+        },
+        {
+          "path": "mlcv1/Datasets/HCMAI24/updated/videos/batch2/L23_V007.mp4",
+          "bytes": 54767904
+        }
+      ],
+      "duplicate_media_names": {},
+      "unknown": [
+        "codec/fps/duration/VFR chưa decode hoặc probe",
+        "tính tương thích encoder của vector có sẵn",
+        "ground truth chưa kiểm duyệt"
+      ]
+    }
+  ],
+  "cross_source_duplicate_media_names": {}
+}

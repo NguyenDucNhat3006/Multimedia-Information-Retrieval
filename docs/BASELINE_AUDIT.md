@@ -1,0 +1,35 @@
+# Audit baseline retrievalBaseline
+
+Audit thực hiện ngày 14/10/2026 bằng source checkout thực tế của [Hungquan5/retrievalBaseline](https://github.com/Hungquan5/retrievalBaseline), không chỉ README. `git rev-parse HEAD` trả **eaa37430367a61163402f9d414724dc01f5f6a91** (commit “Add dres_submit_demo.py for DRES submission flow”). Checkout chỉ phục vụ audit ở `.audit/baseline`, được ignore và không import vào ứng dụng.
+
+Các phát hiện dưới đây là phân tích source ở SHA đó. Không chạy baseline với Milvus/GPU/weights; không liên hệ địa chỉ mạng trong source. Hồi quy được chạy trên triển khai mới, không tuyên bố đã kiểm tra runtime Milvus cũ.
+
+## Giấy phép và phần kế thừa
+
+`git ls-tree -r --name-only HEAD` không có LICENSE/COPYING; README cũng không đưa giấy phép rõ ràng. Không gán MIT hay giấy phép khác cho baseline. Ứng dụng mới tự viết các adapter/pipeline/website; kế thừa ý tưởng CLIP + vector search + filmstrip và ghi công nguồn, không vendor code/ảnh baseline vào app. Quyền dùng/phân phối dataset độc lập với quyền mã nguồn.
+
+## Phát hiện có vị trí source
+
+| Phát hiện tại SHA đã khóa | Hậu quả | Cách xử lý trong triển khai mới / kiểm chứng |
+|---|---|---|
+| `backend/main.py:147–155` gọi `_initialize_models()` trước khi gán `common_queries`; `_initialize_models:170–173` đọc thuộc tính này | Khởi tạo service không hoàn thành ngay khi tạo model xong | Encoder được nạp lười trong `app/encoders.py`; startup không model/network. Smoke API không weights kiểm chứng đường chạy core |
+| `backend/main.py:217` dùng `cached_tensor or tokenizer(...)` | Tensor nhiều phần tử bị ép bool gây lỗi “Boolean value of Tensor … ambiguous” cho cache hit | Kiểm tra cache/None tường minh; không dùng truthiness của tensor |
+| `backend/main.py:356–370` factory tạo service và tải model/kết nối Milvus ngay trong factory; `496` chỉ tạo biến `app` trong `if __name__ == '__main__'` | `uvicorn backend.main:app` không thấy module attribute. `backend.main:create_app --factory` là cách gọi hợp lệ về cấu trúc nhưng còn lỗi cache phía trên. **Import module không trực tiếp tạo service**; tránh kết luận sai rằng model tải lúc import | `app.main:create_app --factory` chạy core độc lập model. Không kế thừa eager service init |
+| Loader `database/upload_database.py:165,175–182` khai báo `filepath,embedding,video_id,frame_id`; backend `main.py:257` xin `path,time,frame_id`, temporal `327/332` đọc `video` | Field contract lệch. Backend không có nguồn `time` tương ứng loader | SQLite Video/Keyframe thống nhất; `video_uid` riêng `media_item_name`; ms từ decoder/map được validate |
+| `backend/main.py:251–268` trả nguyên `MilvusClient.search`; `327–333` dùng `item.entity/item.score` | Client hiện hành trả batch list chứa dict, khác ORM Hit; chưa flatten batch; temporal không thể đọc entity | Mọi vector adapter trả ID/score thống nhất. Milvus tùy chọn đọc `row['entity']`/`row['distance']`, flatten đúng một query |
+| `backend/main.py:236` nhận `milvus_filter`, nhưng `251–268` không truyền `filter=` vào search | Bộ lọc không được áp dụng dù nhận tham số | Lọc video/phạm vi thời gian bằng metadata và kiểm thử retrieval. Adapter Milvus cần filter thực sự |
+| Loader `upload_database.py:334,390` xây `COSINE/HNSW`, backend `main.py:259` tìm `IP`, `261–265` truyền tham số kiểu index khác (`itopk_size`, `search_width`, …) | Metric không khớp index; tham số HNSW không rõ đúng với server/version. Không có lock phiên bản để bảo đảm tương thích | Index nhẹ dùng L2-normalized float32 + inner product; manifest ghi metric/encoder. HNSW dùng tham số tương ứng khi chọn Milvus và kiểm tra version trước chạy |
+| `backend/main.py:303` cắt `fkq[:1000]`, `441–445` trả `result[0]` và `total_results=len(result)` | Với cấu trúc batch `List[List[dict]]` hiện hành, `result[0]` là toàn bộ batch đầu, **không đủ bằng chứng khẳng định chỉ trả top-1**; `total_results` lại đếm batch (thường 1), cắt outer batch không cắt hits. Nếu đổi adapter sang flat hits thì endpoint thành chỉ top-1 | Response mới `results` phẳng, length đúng, top_k public và test nhiều kết quả |
+| Worker `upload_database.py:51–52` tạo model local; `_flush_batch:116–123` dùng global `_ENCODE_CACHE`; `346–366` cache chỉ được chuẩn bị ở process cha; `367–384` dùng multiprocessing spawn | Process con spawn không kế thừa global runtime cache. Với single worker model bị tạo thêm lần nữa dù `_flush_batch` dùng model cache, tốn VRAM/RAM | Mỗi process encoder một instance, explicit argument/cache local; process worker riêng không nhân model bởi Uvicorn |
+| `_flush_batch` `upload_database.py:134–138` bắt lỗi insert rồi `finally buffer.clear()` | Mất batch như thể đã ghi thành công; `--start-index` không là checkpoint chứng minh commit. Không có manifest/checksum/resume nguyên tử | Extraction/index staging và checkpoint thực; publish chỉ sau validation; lỗi job được lưu, input không bị xóa |
+| `database/get_keyframes.py:62` fallback FPS 25, `97/105/122/130` lưu `fid/fps` làm tròn 2 chữ số | Không đúng video VFR, mất độ phân giải ms, metadata thiếu bị che | Timestamp PTS/official map; thời gian integer ms. Live chặn source unknown/fallback/fixture |
+| `dres_submit_demo.py:14,78–85` mặc định 25 FPS; `105` coi timestamp là frame index; `110` thêm `QA-` và đưa question vào answer; `69` chọn ACTIVE đầu tiên; `55` in sessionId | Payload/luật QA sai và có thể nộp evaluation không mong muốn; lộ token | DRES mới resolve ms chính xác, QA ASCII digits giữ `007`, chọn evaluation ACTIVE cụ thể; session chỉ backend và redact |
+| `frontend/src/scripts/submit_dres.js:59–64` v1 GET submit; `93–97` mạng nội bộ hardcode; `103–106` token/evaluation trong localStorage và URL server lịch sử; `111/125` round time; `157–164` chỉ WRONG bị coi lỗi | Endpoint/đơn vị không nhất quán, token trong browser, response pending có thể báo thành công | Website chỉ gọi backend same origin; live server/credentials từ ENV; ledger atomic, status sending/pending/correct/incorrect/rejected/unknown riêng |
+
+Đối chiếu kiểu batch/dict và metric bằng [MilvusClient search API](https://milvus.io/api-reference/pymilvus/v2.6.x/MilvusClient/Vector/search.md), [HNSW](https://milvus.io/docs/hnsw.md) và [DISKANN](https://milvus.io/docs/diskann.md). Đây là tài liệu upstream quan sát ngày audit, không chứng minh phiên bản Milvus mà tác giả baseline từng chạy. Baseline không khóa một deployment tái hiện đầy đủ.
+
+## Hồi quy đã thực hiện
+
+`python -m pytest tests/test_dres.py -q`: **45 passed** ở adapter cuối. Kiểm tra exact ms, QA số 0 đầu, ASCII-only, xung đột media, hai service concurrent chỉ một POST, restart ledger, task mới, timeout unknown không retry, namespace dry run/mock/live, HTTP 400/401/404/412/429/5xx/non-JSON, login và evaluation lựa chọn explicit, redact token, pending không coi đúng, status-type guard, API audit time ms, mock khả dụng khi live bật, điểm và clock mock.
+
+Các test là fixture kỹ thuật, không là bằng chứng chất lượng semantic search hay benchmark kho dataset. Tổng test/core integration mới được ghi ở tài liệu kiểm thử của dự án. Live DRES chưa được chạy vì user chưa cấu hình server/tài khoản hiện tại; mock dùng transport tiêm, không gọi server lịch sử.

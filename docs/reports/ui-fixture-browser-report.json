@@ -1,0 +1,16 @@
+{
+  "tested_at": "2026-10-14T04:23:48.999Z",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "real_base_url": null,
+  "fixture_base_url": "http://127.0.0.1:8001",
+  "fixture_only_mock_ground_truth": true,
+  "checks": [
+    {
+      "check": "Fixture only: declared ground truth → OCR → preview → mock QA submit",
+      "result": "pass",
+      "status": "correct"
+    }
+  ],
+  "javascript_errors": [],
+  "limitation": "Real local smoke validates workflow, not retrieval relevance or a dataset benchmark. No live DRES request."
+}

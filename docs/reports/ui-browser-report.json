@@ -1,0 +1,61 @@
+{
+  "tested_at": "2026-10-14T04:29:41.663Z",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "real_base_url": "http://127.0.0.1:8000",
+  "fixture_base_url": "http://127.0.0.1:8001",
+  "fixture_only_mock_ground_truth": true,
+  "checks": [
+    {
+      "check": "Real search and player seek",
+      "result": "pass",
+      "results": 24,
+      "expected_ms": 2000,
+      "player": {
+        "currentTime": 2,
+        "duration": 913.055057,
+        "readyState": 4
+      }
+    },
+    {
+      "check": "Real browser decodes and plays media bytes, then returns to anchor",
+      "result": "pass"
+    },
+    {
+      "check": "Relevance feedback real API",
+      "result": "pass"
+    },
+    {
+      "check": "Real DRES preview and deliberate dry run, QA 007",
+      "result": "pass",
+      "status": "dry_run"
+    },
+    {
+      "check": "Candidates persist after full reload",
+      "result": "pass"
+    },
+    {
+      "check": "Feedback session and labels persist after full reload",
+      "result": "pass"
+    },
+    {
+      "check": "Data, evaluation and history navigation",
+      "result": "pass"
+    },
+    {
+      "check": "Real image upload and top-k query parameter honored",
+      "result": "pass",
+      "results": 12
+    },
+    {
+      "check": "390px mobile layout without horizontal page overflow",
+      "result": "pass"
+    },
+    {
+      "check": "Fixture only: declared ground truth → OCR → preview → mock QA submit",
+      "result": "pass",
+      "status": "correct"
+    }
+  ],
+  "javascript_errors": [],
+  "limitation": "Real local smoke validates workflow, not retrieval relevance or a dataset benchmark. No live DRES request."
+}

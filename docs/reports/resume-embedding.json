@@ -1,0 +1,81 @@
+{
+  "encoder_id": "openclip:8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e",
+  "model_name": "ViT-B-32",
+  "pretrained": "laion2b_s34b_b79k",
+  "checkpoint_sha256": "ac4f8c4b88af6d963118cbf40ad93176d092abbedfcb752601ae1866352656e6",
+  "preprocessing_hash": "3e9957651d7eec3db5a80263fc55ba0d878a94ec03a3640fbcac6ac9b00693d2",
+  "dimension": 512,
+  "fixture": false,
+  "chunks": [
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\bad65ff1e139648fc66d43920bdd3559ab2e829041c156fbd52c3060c0f55145.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\bad65ff1e139648fc66d43920bdd3559ab2e829041c156fbd52c3060c0f55145.json",
+      "rows": 8,
+      "vectors_sha256": "1a5407fadfaeb9a619982ec648d0922cb70c06f1c6056916b2f828ec19fbb73f",
+      "mapping_sha256": "d18cd184a4ebff9767e22fcd4b2c8a9ca821cfac44d6b61ac5242392bd882efa"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\938d4c87f88a8fdb96e0a309beba2cb39834807e78a8f83b3bb261260321c1e7.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\938d4c87f88a8fdb96e0a309beba2cb39834807e78a8f83b3bb261260321c1e7.json",
+      "rows": 8,
+      "vectors_sha256": "caed073557269d8db6bd486cad579eb30136f76d4160087db97fad572f01d0c6",
+      "mapping_sha256": "1d64de0ae012b7076a7761ac4182bdb3655514b5140fb2181aec4f01d61459f8"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\43aad71018a0154a745c140f42a73920f6243349e8498bbea480636aca7c6b28.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\43aad71018a0154a745c140f42a73920f6243349e8498bbea480636aca7c6b28.json",
+      "rows": 8,
+      "vectors_sha256": "b931a9a1716c0c7d7ee58961e284d86d3214a424900b70f54f0015091ca9fbe0",
+      "mapping_sha256": "56ff8c34d9263280e990b275527fa65cd030be337605fcc0f442136ec502697c"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\5147265628243e7f399e34f1725f39a1f5691a0c88c73d1568452971ebe8d5a4.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\5147265628243e7f399e34f1725f39a1f5691a0c88c73d1568452971ebe8d5a4.json",
+      "rows": 8,
+      "vectors_sha256": "ed774ff867b7400ece2a6070cfaede8519490c1a1a340dabe6b6dc76ede7f85a",
+      "mapping_sha256": "29450553551e8d5f0a271f1b69260b668a39f223e70ffdeddde9ef91208fb7ff"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\8f86fd062ee9de65da9e1814b55345fef01b9b708cb8bf0a9ee0fdc44305a09c.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\8f86fd062ee9de65da9e1814b55345fef01b9b708cb8bf0a9ee0fdc44305a09c.json",
+      "rows": 8,
+      "vectors_sha256": "a70e0ab78fee01ac5e0da01bc910980ce6fbe32dd0e79c43de1ee7e9efdf4d86",
+      "mapping_sha256": "21f821174eccc5af769de3e689395eb9ea27d29feb07acd9e78d42cc486acdc5"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\d933f38d7f35b2801ed5ba181cefe34864ecb1af37aac6e507aaba99c5714d9c.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\d933f38d7f35b2801ed5ba181cefe34864ecb1af37aac6e507aaba99c5714d9c.json",
+      "rows": 8,
+      "vectors_sha256": "57265270ef9379a4a5a6bcb9a64f4035f409ccd0bf60f90807fed35eb09dc410",
+      "mapping_sha256": "702f245dd876d7a700187cf96bcc13d573bdbd123d330ffc244a92da9dc09212"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\eeed803b0255811549873ad3429ecedbb1c8ca5e803c762c4007eb3ce1acf4a1.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\eeed803b0255811549873ad3429ecedbb1c8ca5e803c762c4007eb3ce1acf4a1.json",
+      "rows": 8,
+      "vectors_sha256": "ba589678a78de927904df4acdf09901752dd089d215ff2a5a3d2e27feb7c8974",
+      "mapping_sha256": "a12d0eb0e810cde941e7e13ac4dc532e849de7188969380b95b4dbfe9fd21fb6"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\19eb8c160af8af139e831e46490981a9aa7f283aaecd01c6eb1768811b51cf31.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\19eb8c160af8af139e831e46490981a9aa7f283aaecd01c6eb1768811b51cf31.json",
+      "rows": 8,
+      "vectors_sha256": "26d29006fa5247670b37c1dcb9aebac3ad31320384fd5ba2d4f9bbe251742df2",
+      "mapping_sha256": "4478d2757051e2409cd6736a6b9dc56d3a0f2bf573d4249b8ac5145f9e2685ea"
+    },
+    {
+      "vectors": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\2726ee07da08d392059f844ae6c37174325e10a416e21216621d41aab6c7be45.npy",
+      "mapping": "embeddings\\openclip_8fa64a6226ddccf9c7c572fcda1caaf472474bb521a4a572a4b7a006b8d2381e\\2726ee07da08d392059f844ae6c37174325e10a416e21216621d41aab6c7be45.json",
+      "rows": 8,
+      "vectors_sha256": "cd2fb7dd37507b8faa857744a8ef7104caedc95c89d8d0576d583fa18fdf5d37",
+      "mapping_sha256": "79c0860fe7b1f93d00651bac6e6744d38e5bf1d1398248a23de068106ee51047"
+    }
+  ],
+  "row_count": 72,
+  "dataset_fingerprint": "1671430b2e02d3a5f6bfd7ea7dd5358c86525f71c43adeeef73e7f9707ff5f4f",
+  "keyframe_fingerprint": "67e0875c7e99601592d550f0588938e248ee150b37ba91ed0ec6319ecf3178dc",
+  "elapsed_ms": 294.63810000015656,
+  "reused_rows": 72,
+  "schema_version": 1,
+  "pipeline_version": "pts-shards-v1"
+}

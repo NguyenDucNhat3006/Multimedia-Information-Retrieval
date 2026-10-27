@@ -1,0 +1,21 @@
+{
+  "videos": [
+    {
+      "video_uid": "v_91bdded2c1fa13fb1a5f02c1",
+      "media_item_name": "L02_V020",
+      "frame_count": 48,
+      "config_hash": "851c60696dded61975c2ba7e8a92afcc172f55fd19c648c606819d2f5d0f4234",
+      "sampling": {
+        "pipeline_version": "pts-shards-v1",
+        "fingerprint": "sampled-sha256:fb4cf62560d5fed840bd095b1db01a57103f1b0c0d9ecad5447b07c09558b308",
+        "interval_ms": 2000,
+        "max_frames": 48
+      },
+      "last_timestamp_ms": 94000,
+      "duration_ms": 913000,
+      "subset": true,
+      "vfr_observed": false,
+      "resumed": true
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/inspector.tsx","./src/labeleditor.tsx","./src/pages.tsx","./src/submissionpanel.tsx","./src/api.test.ts","./src/api.ts","./src/icons.tsx","./src/main.tsx","./src/test-setup.ts","./src/types.ts","./src/workflow.test.tsx","./vite.config.ts"],"version":"5.8.3"}

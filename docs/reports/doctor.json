@@ -1,0 +1,29 @@
+{
+  "python": "3.12.10",
+  "python_executable": "D:\\mutimedia-information-retrival\\.venv\\Scripts\\python.exe",
+  "os": "Windows-11-10.0.26200-SP0",
+  "logical_cpu_count": 12,
+  "ram_bytes": 17009004544,
+  "data_drive": "D:\\",
+  "disk_free_bytes": 65604063232,
+  "gpu": {
+    "available": true,
+    "nvidia_smi": "NVIDIA GeForce GTX 1660 Ti, 6144, 576.02"
+  },
+  "device_config": "cpu",
+  "packages": {
+    "numpy": "2.2.5",
+    "Pillow": "11.2.1",
+    "av": "16.0.1",
+    "torch": "2.7.0",
+    "torchvision": "0.22.0",
+    "open_clip_torch": "2.32.0",
+    "fastapi": "0.115.12",
+    "pytesseract": null,
+    "faster-whisper": null,
+    "faiss-cpu": null
+  },
+  "ffmpeg_binary": null,
+  "ffprobe_binary": null,
+  "weights_local": true
+}

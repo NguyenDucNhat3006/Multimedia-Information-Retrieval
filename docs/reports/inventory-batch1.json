@@ -1,0 +1,140 @@
+{
+  "source": "E:\\mlcv1\\Datasets\\HCMAI24\\updated\\videos\\batch1",
+  "inspection": "filesystem-stat",
+  "archive_bytes": null,
+  "file_count": 363,
+  "video_file_count": 363,
+  "compressed_bytes": 66931802158,
+  "uncompressed_bytes": 66931802158,
+  "extensions": {
+    ".mp4": 363
+  },
+  "top_level_paths": {
+    "(root)": 363
+  },
+  "examples": [
+    {
+      "path": "L01_V001.mp4",
+      "bytes": 113433861,
+      "compressed_bytes": 113433861
+    },
+    {
+      "path": "L01_V002.mp4",
+      "bytes": 95357136,
+      "compressed_bytes": 95357136
+    },
+    {
+      "path": "L01_V003.mp4",
+      "bytes": 200935087,
+      "compressed_bytes": 200935087
+    },
+    {
+      "path": "L01_V004.mp4",
+      "bytes": 90388007,
+      "compressed_bytes": 90388007
+    },
+    {
+      "path": "L01_V005.mp4",
+      "bytes": 184205479,
+      "compressed_bytes": 184205479
+    },
+    {
+      "path": "L01_V006.mp4",
+      "bytes": 91768588,
+      "compressed_bytes": 91768588
+    },
+    {
+      "path": "L01_V007.mp4",
+      "bytes": 104216612,
+      "compressed_bytes": 104216612
+    },
+    {
+      "path": "L01_V008.mp4",
+      "bytes": 211363207,
+      "compressed_bytes": 211363207
+    },
+    {
+      "path": "L01_V009.mp4",
+      "bytes": 186713380,
+      "compressed_bytes": 186713380
+    },
+    {
+      "path": "L01_V010.mp4",
+      "bytes": 100961015,
+      "compressed_bytes": 100961015
+    },
+    {
+      "path": "L01_V011.mp4",
+      "bytes": 174194380,
+      "compressed_bytes": 174194380
+    },
+    {
+      "path": "L01_V012.mp4",
+      "bytes": 193270885,
+      "compressed_bytes": 193270885
+    },
+    {
+      "path": "L01_V013.mp4",
+      "bytes": 201329035,
+      "compressed_bytes": 201329035
+    },
+    {
+      "path": "L01_V014.mp4",
+      "bytes": 168591984,
+      "compressed_bytes": 168591984
+    },
+    {
+      "path": "L01_V015.mp4",
+      "bytes": 189260792,
+      "compressed_bytes": 189260792
+    }
+  ],
+  "smallest_videos": [
+    {
+      "path": "L02_V020.mp4",
+      "bytes": 84474273
+    },
+    {
+      "path": "L05_V021.mp4",
+      "bytes": 87613444
+    },
+    {
+      "path": "L11_V004.mp4",
+      "bytes": 89760389
+    },
+    {
+      "path": "L01_V004.mp4",
+      "bytes": 90388007
+    },
+    {
+      "path": "L11_V010.mp4",
+      "bytes": 90795016
+    },
+    {
+      "path": "L11_V015.mp4",
+      "bytes": 90881695
+    },
+    {
+      "path": "L07_V007.mp4",
+      "bytes": 91074248
+    },
+    {
+      "path": "L11_V022.mp4",
+      "bytes": 91343876
+    },
+    {
+      "path": "L01_V006.mp4",
+      "bytes": 91768588
+    },
+    {
+      "path": "L02_V006.mp4",
+      "bytes": 93372631
+    }
+  ],
+  "duplicate_media_names": {},
+  "unknown": [
+    "codec/fps/duration/VFR chưa decode hoặc probe",
+    "tính tương thích encoder của vector có sẵn",
+    "ground truth chưa kiểm duyệt"
+  ]
+}
